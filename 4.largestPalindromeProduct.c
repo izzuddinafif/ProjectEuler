@@ -14,7 +14,6 @@ bool isPalindrome(int n)
     }
     if(rev == n)
     {
-        printf("%d is a palindrome\n", n);
         return true;
     }
     else
@@ -22,15 +21,22 @@ bool isPalindrome(int n)
 }
 int main()
 {
-    for(int i=900;i<999;i++)
+    int pal=0, i, j, li, lj;
+    for(i=999;i>900;i--)
     {
-        for(int j=900;j<999;j++)
+        for(j=999;j>900;j--)
         {
             if(isPalindrome(i*j)==true)
             {
-                printf("%d x %d\n", i, j);
+                if(i*j>pal)
+                {
+                    pal=i*j;
+                    li=i;
+                    lj=j;
+                }
             }
         }
     }
+    printf("%d x %d = %d\n", li, lj, pal);
     return 0;
 }
