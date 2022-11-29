@@ -7,18 +7,30 @@ int main(void)
     char n[20][1000], h[1000];
     for(i=0; i<20; i++)
     {
-        scanf("%s", n[i]);
+        scanf("%s", n[i]); // Taking 20 lines of string as input
     }
     for(i=0; i<20; i++)
     {
-        strcat(h, n[i]);
+        strcat(h, n[i]); // Appending 20 lines of string into a single string
     }
      for(i=0; i<1000; i++)
     {
-        x[i]=h[i]-'0';
+        x[i]=h[i]-'0'; // Converting from char to int
     }
-    for(i=0; i<1000; i++)
+    // for(i=0; i<1000; i++)
+    // {
+    //     printf("%d", x[i]);
+    // }
+    long long int largest=1;
+    for(i=1000; i>=12; i--)
     {
-        printf("%d", x[i]);
+        long long int val=1;
+        for(int j=i; j>=i-12; j--)
+        {
+            val*=x[j];
+        }
+        if(val>largest)
+            largest=val;
     }
+    printf("%lld", largest);
 }
