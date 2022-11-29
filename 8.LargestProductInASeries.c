@@ -21,4 +21,5 @@ int main(void)
     {
         printf("%d", x[i]);
     }
+    for()
 }
