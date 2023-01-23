@@ -1,6 +1,10 @@
 {
     "files.associations": {
-        "string.h": "c"
+        "*.m": "matlab",
+        "string.h": "c",
+        "*.rmd": "markdown",
+        "stdio.h": "c",
+        "cstdlib": "c"
     },
     "discord.enabled": true
 }
